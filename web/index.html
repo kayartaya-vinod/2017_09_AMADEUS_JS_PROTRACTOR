@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="ab">
+<head>
+	<title>Addressbook App</title>
+
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.css">
+
+	<script type="text/javascript" src="assets/jquery/jquery-3.2.1.js"></script>
+	<script type="text/javascript" src="assets/angular/angular.js"></script>
+	<script type="text/javascript" src="assets/angular/angular-route.js"></script>
+	
+	<script type="text/javascript" src="assets/app/app.js"></script>
+
+
+</head>
+<body>
+	<div class="container">
+		<h1>Addressbook App</h1>
+
+		<a href="#!/" class="btn btn-primary">Home</a>
+		<a href="#!/view-all" class="btn btn-primary">View all contacts</a>
+		<a href="#!/add" class="btn btn-primary">Add new contact</a>
+		<a href="#!/get" class="btn btn-primary">Get contact by id</a>
+
+		
+		<div ng-view></div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

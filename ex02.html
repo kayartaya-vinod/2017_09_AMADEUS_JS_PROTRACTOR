@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Workging with Arrays</title>
+	<script type="text/javascript">
+		
+		var nums = [10, 22, 20, 338, 472, 12, 2292, 11];
+		// add a single element
+		nums.push(999);
+		// add multiple elements
+		nums.push(1000, 1001, 2005);
+		// remove the last element
+		var n = nums.pop();
+		console.log("popped element is", n);
+		console.log("array contains", nums);
+
+		// delete n elements from an index
+		// delete 2 elements from index 3 (4th, 5th elements)
+		n = nums.splice(3, 2); 
+		console.log("deleted numbers", n);
+		console.log("array contains", nums);
+
+		for(var i=0; i<nums.length; i++){
+			console.log(`The number at index ${i} is ${nums[i]}`);
+		}
+		
+		// nums.forEach(function(n, index){
+		// 	console.log("value of n is ", n, "at index", index);
+		// });
+
+		var sqr = n=>n*n;
+
+		nums.forEach(n=>console.log("value of n is", n));
+
+		var evnNums = nums.filter(n=>n%2==0);
+		console.log("All even numbers are", evnNums);
+
+		var oddNums = nums.filter(n=>n%2);
+		console.log("All even numbers are", oddNums);
+
+		var index = nums.findIndex(n=>n==2292);
+		console.log("2292 was found at index", index)
+
+		var squares = nums.map(n=>n*n);
+		console.log(nums);
+		console.log(squares);
+
+		nums = [0, 1,2,3,4,5];
+
+		// var total = 0;
+		// total = nums.reduce((total, n)=>total+n);
+		// console.log("Total of all values in " + nums + " is " + total);
+
+		evenSum = nums.reduce((acc, val)=>acc + (val%2==0?val:0));
+		console.log("Total of all EVEN values in " + nums + " is " + evenSum);
+
+		oddSum = nums.reduce(function(ttl, n){ return ttl + (n%2?n:0)});
+		console.log("Total of all ODD values in " + nums + " is " + oddSum);
+
+		// https://vinod.co/snippets
+	</script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+
+
